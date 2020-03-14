@@ -1,0 +1,20 @@
+
+
+.image-container {
+    width: 50vw;
+    margin: 0 auto;
+    padding: 5%;
+}
+
+.image-container img {
+    max-width: 100%;
+}
+
+/* date picker */
+
+.date-holder {
+    display: flex;
+    font-size: 1rem;
+    justify-content: center;
+    
+}
