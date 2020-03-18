@@ -20,6 +20,7 @@ function AddPhoto(props) { //This will insert the photo that is chosen into the 
   
     return (
         <div className = "image-container">
+            <h2>{APOD.title}</h2>
             <img src = {APOD.url} />
             <p>{APOD.explanation}</p>
         </div>

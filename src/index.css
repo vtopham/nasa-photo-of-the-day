@@ -64,7 +64,7 @@ table {
 }
 @import url('https://fonts.googleapis.com/css?family=Noto+Serif&display=swap');
 
-h1, p, label, button {
+h1, h2, p, label, button {
   font-family: 'Noto Serif', serif; 
 } 
 
