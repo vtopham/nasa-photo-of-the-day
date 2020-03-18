@@ -17,9 +17,9 @@ function DatePicker(props) {//this will insert buttons to pick a date to load a 
         <div className = "date-picker">
             <p>Pick a date!</p>
             <div className = "date-holder"> 
-                <label htmlFor="year">YYYY:</label> <input type="text" id="year" name="year" defaultValue = {year}></input>
-                <label htmlFor="year">MM:</label> <input type="text" id="month" name="month" defaultValue = {month}></input>
-                <label htmlFor="year">DD:</label> <input type="text" id="day" name="day" defaultValue = {day}></input>
+                <label htmlFor="year">YYYY</label> <input type="text" id="year" name="year" defaultValue = {year}></input>
+                <label htmlFor="year">MM</label> <input type="text" id="month" name="month" defaultValue = {month}></input>
+                <label htmlFor="year">DD</label> <input type="text" id="day" name="day" defaultValue = {day}></input>
                 <button onClick = {setNewDate} >Submit</button>
             </div>
         </div>

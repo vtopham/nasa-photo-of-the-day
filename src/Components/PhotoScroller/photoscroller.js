@@ -12,12 +12,16 @@ function AddPhoto(props) { //This will insert the photo that is chosen into the 
       .then((response) => {
         setAPOD(response.data);
         console.log(response);
+      })
+      .catch((response) => {
+        alert("Please enter a valid date!");
       });
     },[chosenDate]);
   
     return (
         <div className = "image-container">
-            <img src = {APOD.url} alt = {APOD.explanation} />
+            <img src = {APOD.url} />
+            <p>{APOD.explanation}</p>
         </div>
     );
   }
@@ -38,9 +42,10 @@ const [chosenDate, setChosenDate] = useState(`${year}-${month}-${day}`)
     
 return (
     <div className = "photo-scroller">
+
+        <DatePicker chosenDate = {chosenDate} setChosenDate = {setChosenDate} year = {year} month = {month} day = {day}/>
         <AddPhoto APOD = {APOD} setAPOD = {setAPOD} chosenDate = {chosenDate} setChosenDate = {setChosenDate}/>
         
-        <DatePicker chosenDate = {chosenDate} setChosenDate = {setChosenDate} year = {year} month = {month} day = {day}/>
     </div>
     );
 }
