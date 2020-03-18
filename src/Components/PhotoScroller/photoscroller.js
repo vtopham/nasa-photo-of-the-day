@@ -43,10 +43,12 @@ const [chosenDate, setChosenDate] = useState(`${year}-${month}-${day}`)
     
 return (
     <div className = "photo-scroller">
+      
 
-        <DatePicker chosenDate = {chosenDate} setChosenDate = {setChosenDate} year = {year} month = {month} day = {day}/>
+      <DatePicker chosenDate = {chosenDate} setChosenDate = {setChosenDate} year = {year} month = {month} day = {day}/>
+      <div className = "photo-card">  
         <AddPhoto APOD = {APOD} setAPOD = {setAPOD} chosenDate = {chosenDate} setChosenDate = {setChosenDate}/>
-        
+      </div>
     </div>
     );
 }
