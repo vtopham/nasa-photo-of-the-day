@@ -60,10 +60,21 @@ function AddPhoto(props) { //This will insert the photo that is chosen into the 
   }
 
 
+//COMPONENT STYLING FOR PHOTO SCROLLER
+const PhotoDisplay = styled.div`
+  width: 80%;
+  margin: 0 auto;
+`;
 
+const PhotoCard = styled.div`
+    padding: 0 4%;
+    margin: 2%;
+    border: 1px solid lightgray;
+    box-shadow: 5px 5px 10px lightgray;
 
+`;
 
-
+//THE COMPONENT
 function PhotoScroller () { //this containes the STATES for showing pictures!
 const d = new Date(); //get today's date
 let year = d.getFullYear(); //initialize today's date as year/month/day to pass as props
@@ -74,14 +85,14 @@ const [APOD, setAPOD] = useState({});
 const [chosenDate, setChosenDate] = useState(`${year}-${month}-${day}`)
     
 return (
-    <div className = "photo-scroller">
+    <PhotoDisplay>
       
 
       <DatePicker chosenDate = {chosenDate} setChosenDate = {setChosenDate} year = {year} month = {month} day = {day}/>
-      <div className = "photo-card">  
+      <PhotoCard>  
         <AddPhoto APOD = {APOD} setAPOD = {setAPOD} chosenDate = {chosenDate} setChosenDate = {setChosenDate}/>
-      </div>
-    </div>
+      </PhotoCard>
+    </PhotoDisplay>
     );
 }
 
